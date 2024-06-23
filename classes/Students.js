@@ -24,8 +24,8 @@ class Students {
     this.list.map((value, index) => {
       if (value.id == student.id) {
         this.list.splice(index, 1, student);
-        this.totalRecords -= value.record;
-        this.totalRecords += student.record;
+        this.totalRecords -= parseFloat(value.record);
+        this.totalRecords += parseFloat(student.record);
 
         itemUpdated = true;
         localStorage.setItem('students', JSON.stringify(this.list));
@@ -41,7 +41,7 @@ class Students {
       if (student.id == id) {
         this.list.splice(index, 1);
         this.quantity--;
-        this.totalRecords -= student.record;
+        this.totalRecords -= parseFloat(student.record);
 
         itemDeleted = true;
         localStorage.setItem('students', JSON.stringify(this.list));

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/04fc921eac.js" crossorigin="anonymous"></script>
+    <script src="helpers/validation.js"></script>
+    <script src="helpers/forms.js"></script>
+    <script src="classes/Students.js"></script>
+    <script src="classes/App.js"></script>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="section">
+      <h1>NEW STUDENT FORM</h1>
+      <form>
+        <div class="form-control">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name">
+        </div>
+        <div class="form-control">
+            <label for="last_name">Last name</label>
+            <input type="text" id="last_name" name="last_name">
+        </div>
+       <div class="form-control">
+            <label for="record">Record</label>
+            <input type="text" id="record" name="record">
+       </div>
+        <div class="actions">
+            <input type="submit" value="submit">
+            <input type="button" value="clear fields">
+        </div>
+      </form>
+      </form>
+    </div>
+    <div class="section">
+      <h1>FORM LIST</h1>
+      <table class="students">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Last name</th>
+                <th>Record</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+    <div class="section">
+      <h1>TOTAL STUDENTS AVERAGE</h1>
+      <div class="summary">
+        <span>Total:</span>
+        <strong></strong>
+      </div>
+    </div>
+    <template class="update-modal" hidden>
+      <div class="modal-container">
+        <div class="modal-header">
+          <p>UPDATE STUDENT</p>
+          <span><i class="fa-solid fa-xmark" aria-hidden="true"></i></span>
+        </div>
+        <div class="modal-body">
+          <form class="update-form">
+            <div class="form-control">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="form-control">
+                <label for="last_name">Last name</label>
+                <input type="text" id="last_name" name="last_name">
+            </div>
+           <div class="form-control">
+                <label for="record">Record</label>
+                <input type="text" id="record" name="record">
+           </div>
+            <div class="actions">
+                <input type="submit" value="update">
+                <input type="button" value="clear fields">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer"></div>
+      </div>
+      <div class="back-drop"></div>
+    </template>
+  </body>
+</html>
